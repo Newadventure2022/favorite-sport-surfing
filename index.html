@@ -21,8 +21,17 @@
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <style>
+        :root {
+            --primary-color: #5585b5;
+            --secondary-color: #53a8b6;
+            --third-color: #79c2d0;
+            --fourth-color: #bbe4e9;
+            --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            --border-radius: 5px;
+        }
+
         body {
-            background-color: rgb(4, 123, 83);
+            background-color: var(--primary-color);
         }
 
         h1 {
@@ -30,38 +39,71 @@
         }
 
         section {
-            background-color: blanchedalmond;
+            background-color: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
-            margin: 25px;
+            margin: 20px;
+
+
         }
 
-        .container-fluid {
-            background-color: rgb(220, 245, 220);
+        img {
+            width: 100%;
             border-radius: 5px;
-            margin: 0 auto;
-            max-width: 1200px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .hero {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+            font-size: 50px;
+
+        }
+
+        .container {
+
+
+            margin-inline: auto;
+            width: min(90%, 62.5rem);
+            padding: max(2vh, 1rem);
+        }
+
+        .foot {
+
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <section>
-            <header class="hero">
-                <h1>Changing to Surfing</h1>
-            </header>
-        </section>
+
+    <section>
+        <header class="hero">
+            <h1>Hello from Hero</h1>
+            <div img-fluid>
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/042/original/lairdhamilton6.jpg?1691079171"
+                    alt="">
+            </div>
+        </header>
+    </section>
+    <div class="container">
         <section>
             <main class="middle">
-                <h2>Hello from Tennis</h2>
+                <h2>Hello from Main</h2>
+                <div image-gallery>
+                    <div img-fluid>
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/042/original/lairdhamilton6.jpg?1691079171"
+                            alt="">
+                    </div>
+                </div>
             </main>
         </section>
-        <section>
-            <footer class="foot">
-                <h3>Hello from Tennis</h3>
-            </footer>
-        </section>
     </div>
+    <section>
+        <footer class="foot">
+            <h3>Hello from Footer</h3>
+        </footer>
+    </section>
+
 </body>
 
 </html>
