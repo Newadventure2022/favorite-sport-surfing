@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:wght@500;700&family=Poppins:wght@500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/c6f2297398.js" crossorigin="anonymous"></script>
@@ -22,63 +22,273 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <style>
         :root {
+            --font-1: 'Playfair Display', serif;
+            --font-2: 'Inter', sans-serif;
             --primary-color: #3f89f0;
             --secondary-color: #53a8b6;
             --third-color: #79c2d0;
             --fourth-color: #bbe4e9;
-            --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            --box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
             --border-radius: 5px;
+            --step--2: clamp(0.65rem, calc(0.56rem + 0.45vw), 0.88rem);
+            --step--1: clamp(0.78rem, calc(0.63rem + 0.76vw), 1.17rem);
+            --step-0: clamp(0.94rem, calc(0.69rem + 1.22vw), 1.56rem);
+            --step-1: clamp(1.13rem, calc(0.75rem + 1.87vw), 2.08rem);
+            --step-2: clamp(1.35rem, calc(0.79rem + 2.78vw), 2.78rem);
+            --step-3: clamp(1.62rem, calc(0.81rem + 4.06vw), 3.70rem);
+            --step-4: clamp(1.94rem, calc(0.78rem + 5.83vw), 4.93rem);
+            --step-5: clamp(2.33rem, calc(0.68rem + 8.28vw), 6.58rem);
         }
 
         body {
-            background-color: var(--primary-color);
+            background-color: white;
+            font-size: var(--step-0);
         }
 
         h1 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        section {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-            margin: 20px;
-
+            font-size: var(--step-3);
+            font-family: var(--font-1);
+            font-weight: 700;
 
         }
 
+        h2 {
+            font-family: var(--font-1);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: var(--step-0);
+            font-family: var(--font-2);
+            color: #fff;
+            opacity: 70%;
+        }
 
         img {
             position: cover;
             max-width: 100%;
-            border-radius: 5px;
             box-shadow: var(--box-shadow);
+        }
+
+        button {
+            background-color: transparent;
+            border: #fff solid 1px;
+            border-radius: 40px;
+            color: #fff;
+            opacity: 70%;
+            font-size: 18px;
+            padding: 20px 30px;
+            line-height: 18px;
+            margin-top: 80px;
+        }
+
+
+
+        #second-section {
+            /* background: #fff; */
+            padding-top: 0;
+            padding-bottom: 0;
+            max-width: 1000px;
+        }
+
+        #board1 {
+            width: 177px;
+            box-shadow: none;
+        }
+
+        #fourth-section.container {
+            background-color: #3f89f0;
+            margin: 0px 0px;
+            max-width: 1400px;
+        }
+
+        .five {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            color: #ffd0de;
+        }
+
+        .text {
+            color: white;
+            position: absolute;
+            text-align: left;
+            top: 180px;
+            width: 100%;
+            margin-left: 60px;
+
         }
 
         .hero {
             color: #fff;
-            font-size: 50px;
 
         }
 
         .container {
-            margin-inline: auto;
-            width: min(90%, 62.5rem);
-            padding: max(2vh, 1rem);
+            position: relative;
+            padding: 40px;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1200px;
+            height: auto;
+            min-height: 100px;
+            text-align: center;
         }
 
         .boards {
+            border: 1px solid #000;
+            background: #000;
+            width: 100%;
+            height: 210px;
             position: absolute;
-            left: 70px;
-            top: 400px;
+            left: 0;
+            top: -80px;
             z-index: 2;
 
         }
 
-        .grid-boards {
-            margin: 20px;
+        .surf-boards {
+            justify-content: space-evenly;
+            display: flex;
+            height: 100%;
+            gap: 1px;
+        }
+
+        .surf {
+            display: flex;
+            flex: 1;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            gap: 0;
+        }
+
+        .surf p {
+            margin-bottom: 0;
+
+        }
+
+        .S1 {
+            font-size: var(--step-0);
+            font-family: var(--font-2);
+            font-weight: 700;
+            color: #000;
+        }
+
+        .S2 {
+            font-size: var(--step--1);
+            font-family: var(--font-2);
+            font-weight: 600;
+            color: #000;
+        }
+
+
+
+        .view-boards {
+            color: #000;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 70%;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .arrow {
+            font-size: xx-small;
+            border: #000 2px solid;
+            border-radius: 50px;
+            opacity: none;
+            padding: 1px 1px;
+        }
+
+        .news-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .more-news {
+            color: #000;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .news-articles {
+            margin-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #00000030;
+            justify-content: space-between;
+            overflow-x: scroll;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .news {
+            border: 1px solid black;
+            min-width: 325px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .news img {
+            height: 100px;
+            box-shadow: none;
+        }
+
+        .scroll {
+            font-size: 12px;
+            color: grey;
+        }
+
+        .news-text {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: left;
+        }
+
+        .boxes {
+            max-width: 1000px;
+            margin: 0 auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: max-content;
+            grid-gap: 40px;
+
+        }
+
+        .box {
+            border: #fff solid 1px;
+            color: white;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            align-items: center;
+
+        }
+
+        .grid-image {
+            box-shadow: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .number {
+            color: gold;
+            padding-right: 6px;
+        }
+
+        .country {
+            color: #fff;
+            opacity: 70%;
         }
 
         .foot {
@@ -89,40 +299,153 @@
 
 <body>
 
+    <section id="first-section">
+        <header class="hero">
+            <div class="img">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/135/original/Hero_.jpg?1691153218"
+                    alt="Sunset Surf">
+            </div>
+            <div class="text">
+                <h3>
+                    Places to Surf
+                </h3>
+                <h1>
+                    The Best <span class="five">5</span> Surfing <br /> Spots in the World
+                </h1>
+                <button>
+                    View More
+                </button>
 
-    <header class="hero">
-        <div img-fluid>
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/135/original/Hero_.jpg?1691153218"
-                alt="Sunset Surf">
-        </div>
-    </header>
+            </div>
+        </header>
+    </section>
+    <div>
+        <section class="container" id="second-section">
+            <div class="boards">
+                <div class="surf-boards">
+                    <div class="surf">
+                        <p class="S1">Check out our<br> Surf Boards
+                            <br>
+                            <a href="" class="view-boards">
+                                View more <span class="arrow">➜</span>
+                            </a>
+                        </p>
 
-    <div class="container">
-        <section class="boards">
-            <div class="grid-boards">
-                <div>
-                    <h3>Check out our new boards</h3>
-                </div>
-                <div>
-                    <h3>AI Merrick</h3>
-                </div>
-                <div>
-                    <h3>AI Merrick</h3>
+                    </div>
+
+                    <div class="surf">
+                        <img id="board1"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/382/original/surf-board1.png?1691340462"
+                            alt="Blue Surf boards">
+                        <p class="S2">AI Merrick
+                            <br>
+                            <a href="" class="view-boards">
+                                View more <span class="arrow">➜</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="surf">
+                        <img id="board1"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/383/original/surf-board2.png?1691340469"
+                            alt="Blue Surf boards">
+                        <p class="S2">AI Merrick
+                            <br>
+                            <a href="" class="view-boards">
+                                View more <span class="arrow">➜</span>
+                            </a>
+                        </p>
+                    </div>
+
                 </div>
             </div>
-        </section>
-        <section>
-            <h2>Hello from Main</h2>
-            <div image-gallery>
-                <div img-fluid>
-                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/042/original/lairdhamilton6.jpg?1691079171"
-                        alt="">
-                </div>
-            </div>
-
         </section>
     </div>
-    <section>
+
+    <section class="container" id="news-section">
+        <div class="news-wrapper">
+            <h2>Latest News</h2>
+            <p class="scroll"> <a href="" class="more-news">
+                    See more
+                </a></p>
+        </div>
+        <div class="news-articles d-flex">
+            <span class="news d-flex">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/400/original/news1.jpg?1691348764"
+                    alt="Blue Fish" />
+                <div class="news-text">This will be the text for the news</div>
+            </span>
+            <span class="news d-flex">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/401/original/news2.jpg?1691348773"
+                    alt="Under Water" />
+                <div class="news-text">This will be the text for the news</div>
+            </span>
+            <span class="news d-flex">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/402/original/news3.jpg?1691348779"
+                    alt="Surf Board Standing" />
+                <div class="news-text">This will be the text for the news</div>
+            </span>
+            <span class="news d-flex">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/400/original/news1.jpg?1691348764"
+                    alt="Blue Fish" />
+                <div class="news-text">This will be the text for the news</div>
+            </span>
+            <span class="news d-flex">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/401/original/news2.jpg?1691348773"
+                    alt="Under Water" />
+                <div class="news-text">This will be the text for the news</div>
+            </span>
+            <span class="news d-flex">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/402/original/news3.jpg?1691348779"
+                    alt="Blue Fish" />
+                <div class="news-text">This will be the text for the news</div>
+            </span>
+
+
+        </div>
+        <p class="scroll">← Scroll to see more articles →</p>
+        <div>
+    </section>
+    <section class="container" id="third-section">
+        <h2>Best 5 Surfing Locations</h2>
+        <div>
+            <p></p>
+        </div>
+        </div>
+    </section>
+    <section class="container" id="fourth-section">
+
+        <body>
+            <div class="boxes">
+                <div class="box"><img class="grid-image"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                        alt=""></div>
+                <div class="box"><span class="number">#5</span> <span class="country">Tahiti</span>
+
+                    <div class="city">Nazare</div>
+                </div>
+                <div class="box"><span class="number">#4</span> <span class="country">Portugal</span></div>
+
+                <div class="box"><img class="grid-image"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
+                        alt=""></div>
+                <div class="box"><img class="grid-image"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/128/original/location3.jpg?1691150740"
+                        alt=""></div>
+                <div class="box">#3</div>
+                <div class="box">#2</div>
+                <div class="box"><img class="grid-image"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/129/original/location2.jpg?1691150751"
+                        alt=""></div>
+                <div class="box"><img class="grid-image"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/130/original/location1.jpg?1691150764"
+                        alt=""></div>
+                <div class="box">#1</div>
+
+            </div>
+
+    </Section>
+
+    <section class="container" id="footer-section">
         <footer class="foot">
             <h3>Hello from Footer</h3>
         </footer>
