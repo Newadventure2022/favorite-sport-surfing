@@ -24,8 +24,8 @@
         :root {
             --font-1: 'Playfair Display', serif;
             --font-2: 'Inter', sans-serif;
-            --primary-color: #3f89f0;
-            --secondary-color: #53a8b6;
+            --primary-color: #134995;
+            --secondary-color: #FFCD00;
             --third-color: #79c2d0;
             --fourth-color: #bbe4e9;
             --box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
@@ -97,7 +97,7 @@
         }
 
         #fourth-section.container {
-            background-color: #3f89f0;
+            background-color: var(--primary-color);
             margin: 0px 0px;
             max-width: 1400px;
         }
@@ -213,7 +213,7 @@
             color: #000;
             font-size: 14px;
             font-weight: 600;
-            text-transform: uppercase;
+
         }
 
         .news-articles {
@@ -252,43 +252,81 @@
             text-align: left;
         }
 
+        .waves-image {
+            box-shadow: none;
+            width: 100%;
+            height: 30px;
+        }
+
         .boxes {
             max-width: 1000px;
             margin: 0 auto;
-
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: max-content;
             grid-gap: 40px;
-
+            text-align: left;
+            align-content: center;
         }
 
         .box {
-            border: #fff solid 1px;
+
             color: white;
-            display: flex;
+
             width: 100%;
             height: 100%;
             font-size: 24px;
-            align-items: center;
+
 
         }
 
         .grid-image {
+            border: #fff solid 1px;
             box-shadow: none;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
+        .box-text {
+            margin: 40px auto;
+            vertical-align: middle;
+
+        }
+
         .number {
-            color: gold;
+            color: var(--secondary-color);
             padding-right: 6px;
         }
 
         .country {
             color: #fff;
             opacity: 70%;
+        }
+
+        .city {
+            font-family: var(--font-1);
+        }
+
+        .about {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .dot {
+            color: var(--secondary-color);
+            font-size: 7px;
+            vertical-align: middle;
+            margin: 0px 7px;
+        }
+
+        .see-more {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            vertical-align: middle;
+
         }
 
         .foot {
@@ -399,19 +437,26 @@
                     alt="Blue Fish" />
                 <div class="news-text">This will be the text for the news</div>
             </span>
-
-
         </div>
         <p class="scroll">← Scroll to see more articles →</p>
         <div>
     </section>
+
     <section class="container" id="third-section">
         <h2>Best 5 Surfing Locations</h2>
         <div>
-            <p></p>
+            <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</div>
         </div>
         </div>
     </section>
+    <div class="wave-wrapper">
+        <img class="waves-image"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/420/original/waves.jpg?1691368113"
+            alt="waves">
+    </div>
     <section class="container" id="fourth-section">
 
         <body>
@@ -419,11 +464,42 @@
                 <div class="box"><img class="grid-image"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
                         alt=""></div>
-                <div class="box"><span class="number">#5</span> <span class="country">Tahiti</span>
+                <div class="box">
+                    <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
 
-                    <div class="city">Nazare</div>
+                        <div class="city">Teahupo'o</div>
+                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    See more
+                                </a></span>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="box"><span class="number">#4</span> <span class="country">Portugal</span></div>
+                <div class="box">
+                    <div class="box-text"><span class="number">#4</span> <span class="country">Portugal</span>
+                        <div class="city">Nazare</div>
+                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    See more
+                                </a></span>
+
+                        </div>
+
+                    </div>
+                </div>
 
                 <div class="box"><img class="grid-image"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
@@ -431,15 +507,66 @@
                 <div class="box"><img class="grid-image"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/128/original/location3.jpg?1691150740"
                         alt=""></div>
-                <div class="box">#3</div>
-                <div class="box">#2</div>
+                <div class="box">
+                    <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
+
+                        <div class="city">Waimea</div>
+                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    See more
+                                </a></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-text"><span class="number">#2</span> <span class="country">New Zealand</span>
+
+                        <div class="city">Raglan</div>
+                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    See more
+                                </a></span>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="box"><img class="grid-image"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/129/original/location2.jpg?1691150751"
                         alt=""></div>
                 <div class="box"><img class="grid-image"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/130/original/location1.jpg?1691150764"
                         alt=""></div>
-                <div class="box">#1</div>
+                <div class="box">
+                    <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
+
+                        <div class="city">Pe'ahi</div>
+                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    See more
+                                </a></span>
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
