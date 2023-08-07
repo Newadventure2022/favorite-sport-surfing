@@ -102,6 +102,10 @@
             max-width: 1400px;
         }
 
+        #footer-section {
+            margin: 0px 0px;
+        }
+
         .five {
             font-family: 'Inter', sans-serif;
             font-weight: 800;
@@ -252,10 +256,25 @@
             text-align: left;
         }
 
-        .waves-image {
+        .waves {
             box-shadow: none;
             width: 100%;
             height: 30px;
+        }
+
+        .waves img {
+            animation: animate 7s linear infinite;
+        }
+
+
+        @keyframes animate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(180deg);
+            }
         }
 
         .boxes {
@@ -453,7 +472,7 @@
         </div>
     </section>
     <div class="wave-wrapper">
-        <img class="waves-image"
+        <img class="waves image-fluid"
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/420/original/waves.jpg?1691368113"
             alt="waves">
     </div>
@@ -571,7 +590,11 @@
             </div>
 
     </Section>
-
+    <div class="wave-wrapper">
+        <img class="waves image-fluid"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/430/original/waves2.jpg?1691370059"
+            alt="waves">
+    </div>
     <section class="container" id="footer-section">
         <footer class="foot">
             <h3>Hello from Footer</h3>
