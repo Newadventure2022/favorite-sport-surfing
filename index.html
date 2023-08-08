@@ -30,43 +30,43 @@
             --fourth-color: #bbe4e9;
             --box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
             --border-radius: 5px;
-            --step--2: clamp(0.65rem, calc(0.56rem + 0.45vw), 0.88rem);
-            --step--1: clamp(0.78rem, calc(0.63rem + 0.76vw), 1.17rem);
-            --step-0: clamp(0.94rem, calc(0.69rem + 1.22vw), 1.56rem);
-            --step-1: clamp(1.13rem, calc(0.75rem + 1.87vw), 2.08rem);
-            --step-2: clamp(1.35rem, calc(0.79rem + 2.78vw), 2.78rem);
-            --step-3: clamp(1.62rem, calc(0.81rem + 4.06vw), 3.70rem);
-            --step-4: clamp(1.94rem, calc(0.78rem + 5.83vw), 4.93rem);
-            --step-5: clamp(2.33rem, calc(0.68rem + 8.28vw), 6.58rem);
+
+
         }
 
         body {
             background-color: white;
-            font-size: var(--step-0);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         h1 {
-            font-size: var(--step-3);
+            font-size: 4rem;
             font-family: var(--font-1);
             font-weight: 700;
 
         }
 
         h2 {
+            font-size: 2rem;
             font-family: var(--font-1);
             font-weight: 700;
         }
 
         h3 {
-            font-size: var(--step-0);
+            font-size: 1.5rem;
             font-family: var(--font-2);
             color: #fff;
             opacity: 70%;
         }
 
+        p {
+            font-size: 1rem;
+        }
+
         img {
             position: cover;
-            max-width: 100%;
+            width: 100%;
             box-shadow: var(--box-shadow);
         }
 
@@ -76,27 +76,27 @@
             border-radius: 40px;
             color: #fff;
             opacity: 70%;
-            font-size: 18px;
-            padding: 20px 30px;
+            font-size: 1rem;
+            padding: 1em 2em;
             line-height: 18px;
-            margin-top: 80px;
+            margin-top: 2em;
         }
 
 
         .container {
+
             align-content: center;
             position: relative;
-            margin: 0 auto;
-            max-width: 1200px;
-            height: auto;
-            min-height: 100px;
+            margin-inline: auto;
+            padding: 5em;
             text-align: center;
         }
 
         #second-section {
-            /* background: #fff; */
+
             padding-top: 0;
             padding-bottom: 0;
+
             width: auto;
         }
 
@@ -105,12 +105,14 @@
             box-shadow: none;
         }
 
-        #third-section.container {
-            width: auto;
-            margin-bottom: 20px;
+        #fourth-section {
+            margin-bottom: 1em;
+            padding: 1em;
         }
 
-        #fourth-section {
+        #fifth-section {
+            max-width: 100%;
+            margin: 0 auto;
             background-color: var(--primary-color);
 
 
@@ -178,14 +180,15 @@
         }
 
         .S1 {
-            font-size: var(--step-0);
+
+            font-size: 1.5rem;
             font-family: var(--font-2);
             font-weight: 700;
             color: #000;
         }
 
         .S2 {
-            font-size: var(--step--1);
+            font-size: 1.5rem;
             font-family: var(--font-2);
             font-weight: 600;
             color: #000;
@@ -213,9 +216,9 @@
         .news-wrapper {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
+            margin-top: 1.5rem;
             width: auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
         .more-news {
@@ -226,13 +229,12 @@
         }
 
         .news-articles {
-            margin-top: 15px;
-            padding-bottom: 15px;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
             border-bottom: 1px solid #00000030;
             justify-content: space-between;
             overflow-x: scroll;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 1rem;
             width: auto;
         }
 
@@ -256,7 +258,7 @@
         }
 
         .news-text {
-            font-size: 15px;
+            font-size: 1rem;
             font-weight: 700;
             line-height: 18px;
             text-align: left;
@@ -279,37 +281,27 @@
             height: 30px;
         }
 
-        .boxes-wrapper {
-            max-width: 800px;
+        .grid {
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: max-content;
             grid-gap: 15px;
-            align-content: center;
-            padding-top: 30px;
         }
 
-        .box {
-            color: white;
-            width: auto;
-            height: 80%;
-            font-size: 24px;
-        }
-
-        .grid-image {
-            border: #fff solid 1px;
+        .grid img {
+            width: 100%;
+            border: #fff solid 2px;
             box-shadow: none;
-            width: auto;
-            height: 100%;
-            object-fit: cover;
         }
 
         .box-text {
+            color: white;
+            font-size: 2rem;
+            text-align: left;
             margin: 0 auto;
             vertical-align: middle;
-            width: auto;
-            height: 100%;
+            padding-top: 2rem;
 
         }
 
@@ -352,24 +344,40 @@
             border-radius: 5px;
         }
 
-        @media (max-width: 600px) {
-            .boxes-wrapper {
-                grid-template-columns: 1fr;
+
+
+        @media only screen and (min-width: 768px) and (max-width: 959px) {
+            h1 {
+                font-size: 50px;
             }
 
-            .box {
-                height: 100%;
-                width: auto;
-                margin: 0 auto;
-                text-align: center;
-                padding: 0;
+            h2 {
+                font-size: 24px;
             }
 
-            .grid-image {
-                height: 80%;
-                width: auto;
+            h3 {
+                font-size: 20px;
             }
 
+            .about {
+                font-size: 14px;
+            }
+
+            .image-fluid {
+                width: 200%;
+
+            }
+
+            @media only screen and (min-width: 500px) and (max-width: 767px) {
+                .about {
+                    font-size: 12px;
+                }
+
+                .grid img {
+                    width: 300%;
+
+                }
+            }
         }
     </style>
 </head>
@@ -395,47 +403,46 @@
             </div>
         </header>
     </section>
-    <div>
-        <section class="container" id="second-section">
-            <div class="boards">
-                <div class="surf-boards">
-                    <div class="surf">
-                        <p class="S1">Check out our<br> Surf Boards
-                            <br>
-                            <a href="" class="view-boards">
-                                View more <span class="arrow">➜</span>
-                            </a>
-                        </p>
 
-                    </div>
-
-                    <div class="surf">
-                        <img id="board1"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/382/original/surf-board1.png?1691340462"
-                            alt="Blue Surf boards">
-                        <p class="S2">AI Merrick
-                            <br>
-                            <a href="" class="view-boards">
-                                View more <span class="arrow">➜</span>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="surf">
-                        <img id="board1"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/383/original/surf-board2.png?1691340469"
-                            alt="Blue Surf boards">
-                        <p class="S2">AI Merrick
-                            <br>
-                            <a href="" class="view-boards">
-                                View more <span class="arrow">➜</span>
-                            </a>
-                        </p>
-                    </div>
-
+    <section class="container" id="second-section">
+        <div class="boards">
+            <div class="surf-boards">
+                <div class="surf">
+                    <p class="S1">Check out our<br> Surf Boards
+                        <br>
+                        <a href="" class="view-boards">
+                            View more <span class="arrow">➜</span>
+                        </a>
+                    </p>
                 </div>
+
+                <div class="surf">
+                    <img id="board1"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/382/original/surf-board1.png?1691340462"
+                        alt="Blue Surf boards">
+                    <p class="S2">AI Merrick
+                        <br>
+                        <a href="" class="view-boards">
+                            View more <span class="arrow">➜</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="surf">
+                    <img id="board1"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/383/original/surf-board2.png?1691340469"
+                        alt="Blue Surf boards">
+                    <p class="S2">AI Merrick
+                        <br>
+                        <a href="" class="view-boards">
+                            View more <span class="arrow">➜</span>
+                        </a>
+                    </p>
+                </div>
+
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
 
     <section class="container" id="news-section">
         <div class="news-wrapper">
@@ -480,13 +487,13 @@
         <div>
     </section>
 
-    <section class="container" id="third-section">
+    <section class="container" id="fourth-section">
         <h2>Best 5 Surfing Locations</h2>
         <div>
-            <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.</div>
+                ex ea commodo consequat.</p>
         </div>
         </div>
     </section>
@@ -494,23 +501,29 @@
         <img class="waves image-fluid"
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/420/original/waves.jpg?1691368113"
             alt="waves">
-
     </div>
-    <section class="box-wrapper" id="fourth-section">
-        <section>
-            <div class="boxes-wrapper">
-                <div class="box"><img class="grid-image image-fluid"
+    <section class="container d-flex" id="fifth-section">
+        <div class="grid">
+            <div class="container-fluid">
+                <div class="box">
+                    <img class="image-fluid"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                        alt=""></div>
+                        alt="">
+                </div>
+            </div>
+            <div class="container-fluid">
                 <div class="box">
                     <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
 
                         <div class="city">Teahupo'o</div>
-                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        <div class="about">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                             aliquip
-                            ex ea commodo consequat.</div>
+                            ex ea commodo consequat.
+
+                        </div>
                         <div>
                             <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
                             <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
@@ -521,32 +534,42 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container-fluid">
                 <div class="box">
                     <div class="box-text"><span class="number">#4</span> <span class="country">Portugal</span>
                         <div class="city">Nazare</div>
-                        <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        <div class="about">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                             aliquip
-                            ex ea commodo consequat.</div>
-                        <div>
-                            <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
-                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
-                                    See more
-                                </a></span>
+                            ex ea commodo consequat.
 
                         </div>
-
+                        <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                style="color: #ffCD00;"></i></span>
+                        <span><a href="" class="see-more">
+                                See more
+                            </a></span>
                     </div>
                 </div>
-
-                <div class="box"><img class="grid-image image-fluid"
+            </div>
+            <div class="container-fluid">
+                <div class="box"><img class="image-fluid"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
-                        alt=""></div>
-                <div class="box"><img class="grid-image image-fluid"
+                        alt="">
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="box"><img class="image-fluid"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/128/original/location3.jpg?1691150740"
-                        alt=""></div>
+                        alt="">
+                </div>
+            </div>
+
+            <div class="container-fluid">
                 <div class="box">
                     <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
 
@@ -559,13 +582,16 @@
                         <div>
                             <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
                             <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    style="color: #ffCD00;"></i></span>
+                            <span><a href="" class="see-more">
                                     See more
                                 </a></span>
 
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container-fluid">
                 <div class="box">
                     <div class="box-text"><span class="number">#2</span> <span class="country">New Zealand</span>
 
@@ -578,19 +604,26 @@
                         <div>
                             <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
                             <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    style="color: #ffCD00;"></i></span>
+                            <span><a href="" class="see-more">
                                     See more
                                 </a></span>
-
                         </div>
                     </div>
                 </div>
-                <div class="box"><img class="grid-image image-fluid"
+            </div>
+            <div class="container-fluid">
+                <div class="box"><img class="grid-image"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/129/original/location2.jpg?1691150751"
-                        alt=""></div>
-                <div class="box"><img class="grid-image image-fluid"
+                        alt="">
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="box"><img class="image-fluid"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/130/original/location1.jpg?1691150764"
                         alt=""></div>
+            </div>
+            <div class="container-fluid">
                 <div class="box">
                     <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
 
@@ -603,28 +636,27 @@
                         <div>
                             <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
                             <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                    style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                    style="color: #ffCD00;"></i></span>
+                            <span><a href="" class="see-more">
                                     See more
                                 </a></span>
 
                         </div>
                     </div>
                 </div>
-
             </div>
+    </section>
+    <div class="wave-wrapper2">
+        <img class="waves image-fluid"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/430/original/waves2.jpg?1691370059"
+            alt="waves">
+    </div>
 
-        </Section>
-        <div class="wave-wrapper2">
-            <img class="waves image-fluid"
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/430/original/waves2.jpg?1691370059"
-                alt="waves">
-        </div>
-
-        <section class="container" id="footer-section">
-            <footer class="foot">
-                <h3>Hello from Footer</h3>
-            </footer>
-        </section>
+    <section class="container" id="footer-section">
+        <footer class="foot">
+            <h3>Hello from Footer</h3>
+        </footer>
+    </section>
 
 </body>
 
