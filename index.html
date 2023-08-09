@@ -63,6 +63,11 @@
             font-size: 1rem;
         }
 
+        iframe {
+            width: 100%;
+            border-radius: 10px;
+        }
+
         .hero img {
             position: cover;
             width: 100%;
@@ -82,13 +87,43 @@
         }
 
 
-        .container {
 
+        #video-section {
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        .video:hover {
+            transform: scale(1.2);
+            transition: all 150ms ease-in-out;
+        }
+
+        .container {
             align-content: center;
             position: relative;
             margin-inline: auto;
-            padding: 5em;
+            padding: 0 5em;
             text-align: center;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .container {
+                padding: 0 2em;
+            }
+        }
+
+        .wrapper-2 {
+            background: rgb(42, 141, 243);
+            background: linear-gradient(180deg, rgba(42, 141, 243, 1) 0%, rgba(9, 9, 121, 1) 70%);
+
         }
 
         #second-section {
@@ -110,15 +145,18 @@
         }
 
         #fifth-section {
-            max-width: 100%;
             margin: 0 auto;
-            background-color: var(--primary-color);
-
-
         }
 
         #footer-section {
+            background-color: lightgray;
+            border-top: #000 solid 1px;
             margin: 0px 0px;
+        }
+
+        #footer-section h3 {
+            color: #000;
+
         }
 
         .five {
@@ -145,8 +183,6 @@
 
 
         .boards {
-            border: 1px solid #000;
-            background: #000;
             width: 100%;
             height: 150px;
             position: absolute;
@@ -157,19 +193,27 @@
         }
 
         .surf-boards {
-            justify-content: space-between;
-            display: flex;
-            height: 100%;
-            gap: 1px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
         }
 
         .surf {
-            display: flex;
-            flex: 1;
+            display: grid;
             height: 100%;
             justify-content: center;
             align-items: center;
             background-color: #fff;
+            border: #000 solid 1px;
+            gap: 0;
+            grid-template-columns: 1fr;
+        }
+
+        .surf-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: #fff;
+            border: #000 solid 1px;
             gap: 0;
         }
 
@@ -179,7 +223,6 @@
         }
 
         .S1 {
-
             font-size: 1.5rem;
             font-family: var(--font-2);
             font-weight: 700;
@@ -187,6 +230,8 @@
         }
 
         .S2 {
+            padding-top: 2rem;
+            padding-right: 2rem;
             font-size: 1.5rem;
             font-family: var(--font-2);
             font-weight: 600;
@@ -277,8 +322,9 @@
         .waves {
             box-shadow: none;
             width: 100%;
-            height: 30px;
+            height: 40px;
         }
+
 
         .grid {
             display: grid;
@@ -294,7 +340,7 @@
         }
 
         .card {
-            background: transparent;
+            background-color: transparent;
             border: none;
             margin: 30px 0;
             overflow: hidden;
@@ -306,6 +352,7 @@
         .card-header.grid {
             grid-gap: 30px;
             padding: 0;
+            background-color: transparent;
 
         }
 
@@ -367,15 +414,16 @@
 
         }
 
-        .foot {
-            border-radius: 5px;
+        .video-text h3,
+        p {
+            color: #000;
         }
     </style>
 </head>
 
 <body>
     <section id="first-section">
-        <header class="hero">
+        <header class=" hero">
             <div class="img">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/135/original/Hero_.jpg?1691153218"
                     alt="Sunset Surf">
@@ -406,8 +454,7 @@
                             </a>
                         </p>
                     </div>
-
-                    <div class="surf">
+                    <div class="surf-2">
                         <img id="board1"
                             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/382/original/surf-board1.png?1691340462"
                             alt="Blue Surf boards">
@@ -418,7 +465,7 @@
                             </a>
                         </p>
                     </div>
-                    <div class="surf">
+                    <div class="surf-2">
                         <img id="board1"
                             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/383/original/surf-board2.png?1691340469"
                             alt="Blue Surf boards">
@@ -486,163 +533,214 @@
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat.</p>
             </div>
+
+        </section>
     </div>
-    </section>
-    </div>
+
     <div class="wave-wrapper">
         <img class="waves image-fluid"
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/420/original/waves.jpg?1691368113"
             alt="waves">
     </div>
-    <div class="wrapper-2"></div>
-    <section class="container d-flex" id="fifth-section">
-        <div class="grid grid-5-rows">
-            <div class="card">
-                <div class="card-header grid grid-2-columns">
-                    <img class="img-responsive"
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                        alt="">
-                    <div class="text-wrapper">
-                        <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
-                            <div class="city">Teahupo'o</div>
-                            <div class="about">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
-                                ex ea commodo consequat.
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
-                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                        style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
-                                        See more
-                                    </a></span>
+    <div class="wrapper-2">
+        <section class="container d-flex" id="fifth-section">
+            <div class="grid grid-5-rows">
+                <div class="card">
+                    <div class="card-header grid grid-2-columns">
+                        <img class="img-responsive"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            alt="">
+                        <div class="text-wrapper">
+                            <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
+                                <div class="city">Teahupo'o</div>
+                                <div class="about">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat.
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                            style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                            See more
+                                        </a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header grid grid-2-columns">
-                    <div class="text-wrapper">
-                        <div class="box-text"><span class="number">#4</span> <span class="country">Portugal</span>
-                            <div class="city">Nazare</div>
-                            <div class="about">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
-                                ex ea commodo consequat.
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
-                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                        style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
-                                        See more
-                                    </a></span>
+                <div class="card">
+                    <div class="card-header grid grid-2-columns">
+                        <div class="text-wrapper">
+                            <div class="box-text"><span class="number">#4</span> <span class="country">Portugal</span>
+                                <div class="city">Nazare</div>
+                                <div class="about">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat.
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                            style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                            See more
+                                        </a></span>
+                                </div>
                             </div>
                         </div>
+                        <img class="img-responsive"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            alt="">
                     </div>
-                    <img class="img-responsive"
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                        alt="">
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header grid grid-2-columns">
-                    <img class="img-responsive"
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                        alt="">
-                    <div class="text-wrapper">
-                        <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
+                <div class="card">
+                    <div class="card-header grid grid-2-columns">
+                        <img class="img-responsive"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            alt="">
+                        <div class="text-wrapper">
+                            <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
 
-                            <div class="city">Waimea</div>
-                            <div class="about">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
-                                ex ea commodo consequat.
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
-                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                        style="color: #ffCD00;"></i></span>
-                                <span><a href="" class="see-more">
-                                        See more
-                                    </a></span>
+                                <div class="city">Waimea</div>
+                                <div class="about">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat.
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                            style="color: #ffCD00;"></i></span>
+                                    <span><a href="" class="see-more">
+                                            See more
+                                        </a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header grid grid-2-columns">
-                    <div class="text-wrapper">
-                        <div class="box-text"><span class="number">#2</span> <span class="country">New Zealand</span>
-                            <div class="city">Raglan</div>
-                            <div class="about">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
-                                ex ea commodo consequat.
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
-                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                        style="color: #ffCD00;"></i></span>
-                                <span><a href="" class="see-more">
-                                        See more
-                                    </a></span>
+                <div class="card">
+                    <div class="card-header grid grid-2-columns">
+                        <div class="text-wrapper">
+                            <div class="box-text"><span class="number">#2</span> <span class="country">New
+                                    Zealand</span>
+                                <div class="city">Raglan</div>
+                                <div class="about">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat.
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                            style="color: #ffCD00;"></i></span>
+                                    <span><a href="" class="see-more">
+                                            See more
+                                        </a></span>
+                                </div>
                             </div>
                         </div>
+                        <img class="img-responsive"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            alt="">
                     </div>
-                    <img class="img-responsive"
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                        alt="">
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header grid grid-2-columns">
-                    <img class="img-responsive"
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                        alt="">
+                <div class="card">
+                    <div class="card-header grid grid-2-columns">
+                        <img class="img-responsive"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            alt="">
 
-                    <div class="text-wrapper">
-                        <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
+                        <div class="text-wrapper">
+                            <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
 
-                            <div class="city">Pe'ahi</div>
-                            <div class="about">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
-                                ex ea commodo consequat.
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
-                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                        style="color: #ffCD00;"></i></span>
-                                <span><a href="" class="see-more">
-                                        See more
-                                    </a></span>
+                                <div class="city">Pe'ahi</div>
+                                <div class="about">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat.
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up-from-bracket fa-xs" style="color: #e2e5e9;"></i>
+                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                            style="color: #ffCD00;"></i></span>
+                                    <span><a href="" class="see-more">
+                                            See more
+                                        </a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
+
+        </section>
     </div>
+
     <div class="wave-wrapper2">
         <img class="waves image-fluid"
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/430/original/waves2.jpg?1691370059"
             alt="waves">
     </div>
 
+    <section class="container" id="video-section">
+        <div class="video-text">
+            <h3>
+                videos
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua.
+            </p>
+        </div>
+        <div class="video-gallery">
+            <div class="container-fluid video sm">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JAzVhaNsBXY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="container-fluid video sm">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZkImMlObM8E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="container-fluid video sm">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wEvZpzaHIwY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="container-fluid video sm">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yqeirBfn2j4"
+                        allowfullscreen title="YouTube video player"></iframe>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
     <section class="container" id="footer-section">
         <footer class="foot">
             <h3>Hello from Footer</h3>
