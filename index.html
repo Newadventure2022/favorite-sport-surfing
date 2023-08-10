@@ -155,12 +155,24 @@
         }
 
         #fourth-section {
+            font-size: 50px;
             margin-bottom: 1em;
             padding: 1em;
         }
 
+        #fourth-section h2 {
+            font-size: 50px;
+        }
+
+        #fourth-section p {
+            font-size: 18px;
+            line-height: 30px;
+
+        }
+
         #fifth-section {
             margin: 0 auto;
+
         }
 
         #footer-section {
@@ -354,6 +366,7 @@
             color: black;
             margin: 0 auto;
             text-align: center;
+
         }
 
         .card {
@@ -389,11 +402,17 @@
 
         }
 
+        .locations {
+            position: relative;
+            z-index: 1;
+            top: -120px;
+        }
+
         .box-text {
             color: white;
             font-size: 2rem;
             text-align: left;
-            margin: 0 auto;
+            margin: 50px auto;
 
 
         }
@@ -414,11 +433,16 @@
             font-family: var(--font-1);
         }
 
+        .about-5 {
+            max-width: 600px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+        }
+
         .about {
             font-size: 15px;
             line-height: 1.5;
             max-width: 600px;
-            margin: 20px auto 0 auto;
             text-align: left;
         }
 
@@ -605,7 +629,7 @@
     <section class="container" id="fourth-section">
         <h2>Best 5 Surfing Locations</h2>
         <div>
-            <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            <p class="about-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.</p>
@@ -621,146 +645,153 @@
     </div>
     <div class="wrapper-2">
         <section class="container d-flex" id="fifth-section">
-            <div class="grid grid-5-rows">
-                <div class="card">
-                    <div class="card-header grid grid-2-columns">
-                        <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/789/original/teahupoo-tahiti-freesurfing.jpg?1691675704"
-                            alt="">
-                        <div class="text-wrapper">
-                            <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
-                                <div class="city">Teahupo'o</div>
-                                <div class="about">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea commodo consequat.
-                                </div>
-                                <div>
-                                    <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                            style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
-                                            See more
-                                        </a></span>
+            <div class="locations">
+                <div class="grid grid-5-rows">
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/789/original/teahupoo-tahiti-freesurfing.jpg?1691675704"
+                                alt="">
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
+                                    <div class="city">Teahupo'o</div>
+                                    <div class="about">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut
+                                        aliquip
+                                        ex ea commodo consequat.
+                                    </div>
+                                    <div>
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                                See more
+                                            </a></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header grid grid-2-columns">
-                        <div class="text-wrapper">
-                            <div class="box-text"><span class="number">#4</span> <span class="country">Portugal</span>
-                                <div class="city">Nazare</div>
-                                <div class="about">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea commodo consequat.
-                                </div>
-                                <div>
-                                    <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                            style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
-                                            See more
-                                        </a></span>
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#4</span> <span
+                                        class="country">Portugal</span>
+                                    <div class="city">Nazare</div>
+                                    <div class="about">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut
+                                        aliquip
+                                        ex ea commodo consequat.
+                                    </div>
+                                    <div>
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span> <span><a href="" class="see-more">
+                                                See more
+                                            </a></span>
+                                    </div>
                                 </div>
                             </div>
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
+                                alt="">
                         </div>
-                        <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
-                            alt="">
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header grid grid-2-columns">
-                        <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/792/original/Waimea.jpg?1691676542"
-                            alt="">
-                        <div class="text-wrapper">
-                            <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/792/original/Waimea.jpg?1691676542"
+                                alt="">
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
 
-                                <div class="city">Waimea</div>
-                                <div class="about">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea commodo consequat.
-                                </div>
-                                <div>
-                                    <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                            style="color: #ffCD00;"></i></span>
-                                    <span><a href="" class="see-more">
-                                            See more
-                                        </a></span>
+                                    <div class="city">Waimea</div>
+                                    <div class="about">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut
+                                        aliquip
+                                        ex ea commodo consequat.
+                                    </div>
+                                    <div>
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span>
+                                        <span><a href="" class="see-more">
+                                                See more
+                                            </a></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header grid grid-2-columns">
-                        <div class="text-wrapper">
-                            <div class="box-text"><span class="number">#2</span> <span class="country">New
-                                    Zealand</span>
-                                <div class="city">Raglan</div>
-                                <div class="about">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea commodo consequat.
-                                </div>
-                                <div>
-                                    <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                            style="color: #ffCD00;"></i></span>
-                                    <span><a href="" class="see-more">
-                                            See more
-                                        </a></span>
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#2</span> <span class="country">New
+                                        Zealand</span>
+                                    <div class="city">Raglan</div>
+                                    <div class="about">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut
+                                        aliquip
+                                        ex ea commodo consequat.
+                                    </div>
+                                    <div>
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span>
+                                        <span><a href="" class="see-more">
+                                                See more
+                                            </a></span>
+                                    </div>
                                 </div>
                             </div>
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/794/original/Raglan-new-zealand.jpg?1691676906"
+                                alt="">
                         </div>
-                        <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/794/original/Raglan-new-zealand.jpg?1691676906"
-                            alt="">
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header grid grid-2-columns">
-                        <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/796/original/Pe'ahi__Hawaii.jpg?1691677602"
-                            alt="Pe'ahi__Hawaii">
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/796/original/Pe'ahi__Hawaii.jpg?1691677602"
+                                alt="Pe'ahi__Hawaii">
 
-                        <div class="text-wrapper">
-                            <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
 
-                                <div class="city">Pe'ahi</div>
-                                <div class="about">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea commodo consequat.
-                                </div>
-                                <div>
-                                    <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                    <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                            style="color: #ffCD00;"></i></span>
-                                    <span><a href="" class="see-more">
-                                            See more
-                                        </a></span>
+                                    <div class="city">Pe'ahi</div>
+                                    <div class="about">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut
+                                        aliquip
+                                        ex ea commodo consequat.
+                                    </div>
+                                    <div>
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span>
+                                        <span><a href="" class="see-more">
+                                                See more
+                                            </a></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
 
