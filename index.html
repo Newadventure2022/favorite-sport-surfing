@@ -71,7 +71,7 @@
 
         iframe {
             width: 100%;
-            border-radius: 10px;
+            border: #000 solid 2px;
         }
 
 
@@ -98,7 +98,7 @@
 
         #video-section {
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 100px 20px;
         }
 
         .video-gallery {
@@ -164,15 +164,13 @@
         }
 
         #footer-section {
-            background-color: lightgray;
+            background-color: #efefef;
             border-top: #000 solid 1px;
             margin: 0px 0px;
+            width: 100%;
         }
 
-        #footer-section h3 {
-            color: #000;
 
-        }
 
         .five {
             font-family: 'Inter', sans-serif;
@@ -210,6 +208,7 @@
         .surf-boards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
 
         }
 
@@ -400,11 +399,13 @@
         }
 
         .number {
+            font-size: 16px;
             color: var(--secondary-color);
 
         }
 
         .country {
+            font-size: 16px;
             color: #fff;
             opacity: 70%;
         }
@@ -437,10 +438,62 @@
 
         }
 
-        .video-text h3,
+        .video-text h2,
         p {
+            padding: 0 10px;
             text-align: left;
             color: #000;
+            margin-bottom: 30px;
+        }
+
+        .video-text h2 {
+            font-size: 50px;
+
+        }
+
+        .video-text p {
+            font-size: 18px;
+        }
+
+
+        .video-text a {
+            text-decoration: none;
+        }
+
+        .video-text a:hover {
+            color: red;
+            transition: all 150ms ease-in-out;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+            padding: 0 40px;
+            text-align: center;
+
+        }
+
+        ul {
+            margin-top: 20px;
+            display: inline-block;
+            text-align: left;
+            list-style-type: none;
+
+        }
+
+
+
+        @media (max-width: 767.98px) {
+            .grid-2-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .grid-5-rows {
+                grid-gap: 5px;
+            }
         }
     </style>
 </head>
@@ -572,7 +625,7 @@
                 <div class="card">
                     <div class="card-header grid grid-2-columns">
                         <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/789/original/teahupoo-tahiti-freesurfing.jpg?1691675704"
                             alt="">
                         <div class="text-wrapper">
                             <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
@@ -617,14 +670,14 @@
                             </div>
                         </div>
                         <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
                             alt="">
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header grid grid-2-columns">
                         <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/792/original/Waimea.jpg?1691676542"
                             alt="">
                         <div class="text-wrapper">
                             <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
@@ -673,15 +726,15 @@
                             </div>
                         </div>
                         <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/794/original/Raglan-new-zealand.jpg?1691676906"
                             alt="">
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header grid grid-2-columns">
                         <img class="img-responsive"
-                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/131/original/location5.jpg?1691150778"
-                            alt="">
+                            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/796/original/Pe'ahi__Hawaii.jpg?1691677602"
+                            alt="Pe'ahi__Hawaii">
 
                         <div class="text-wrapper">
                             <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
@@ -719,19 +772,36 @@
 
     <section class="container" id="video-section">
         <div class="video-text">
-            <h3>
-                videos
-            </h3>
+            <h2>
+                Videos
+            </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna
-                aliqua.
+                The number of surf videos and films are plenty, but here are a few that take special notice. #1 <span>
+                    <a href="https://lairdhamilton.com/" target="_blank" rel="noreferrer"
+                        title="Link to lairdhamilton.com"> <span> Laird Hamilton
+                        </span></a>is the best big wave surfer in the world.
+                    #2 <a href="https://kswaveco.com/" target="_blank" rel="noreferrer" title="Link to kswaveco.com">
+                        <span> Kelly Slater</span></a>is widely regarded as the
+                    greatest professional surfer of all time, and holds 56 Championship Tour victories.
+                    #3 <a href="https://sebastiansteudtner.de/" target="_blank" rel="noreferrer"
+                        title="Link to sebastiansteudtner.de"> <span> Sebastian Steudtner
+                        </span></a>“The largest wave surfed (unlimited) – male is 26.21 m (86 feet), and was achieved by
+                    Sebastian Steudtner (Germany), off
+                    the coast of Praia do Norte, Nazaré, Portugal, on 29 October 2020,” reads a statement from Guinness
+                    World Records.
+                    #4 <a href="https://www.brucebrownfilms.com/the-endless-summer" target="_blank" rel="noreferrer"
+                        title="Link to brucebrownfilms.com">
+                        <span> Endless Summer
+                        </span></a>"Bruce Brown's sixth film. <em>The Endless Summer</em>, is the archetypal tale of two
+                    California surfers hitting the the road to follow summer and surf around the world." Watch the
+                    original before checking out part two.
+
             </p>
         </div>
         <div class="video-gallery">
             <div class="container-fluid video sm">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JAzVhaNsBXY"
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/14EhVoADGd8"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
@@ -739,7 +809,7 @@
             </div>
             <div class="container-fluid video sm">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZkImMlObM8E"
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mfdM0mcnThQ"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
@@ -748,7 +818,7 @@
 
             <div class="container-fluid video sm">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wEvZpzaHIwY"
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QBVt8pzjnL8"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
@@ -756,7 +826,7 @@
             </div>
             <div class="container-fluid video sm">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yqeirBfn2j4"
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lmHQ9v2ijsQ"
                         allowfullscreen title="YouTube video player"></iframe>
                 </div>
             </div>
@@ -765,9 +835,49 @@
 
         </div>
     </section>
-    <section class="container" id="footer-section">
-        <footer class="foot">
-            <h3>Hello from Footer</h3>
+    <section class="foot" id="footer-section">
+        <footer class="footer-grid">
+            <div>
+
+                <ul>
+                    <li>
+                        <h5 class="foot-links">Links</h5>
+                    </li>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Competitions</li>
+                    <li>Interviews</li>
+                    <li>Courses</li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <ul>
+                    <li>
+                        <h5 class="foot-links">Store</h5>
+                    </li>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Competitions</li>
+                    <li>Interviews</li>
+                    <li>Courses</li>
+                </ul>
+            </div>
+            <div>
+
+                <ul>
+                    <li>
+                        <h5 class="foot-links">Regions</h5>
+                    </li>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Competitions</li>
+                    <li>Interviews</li>
+                    <li>Courses</li>
+                </ul>
+            </div>
         </footer>
     </section>
 
