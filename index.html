@@ -143,11 +143,15 @@
         }
 
         #send {
+            color: #fff;
             font-size: 10px;
-            vertical-align: middle;
+
             opacity: 0.8;
         }
 
+        .btn {
+            padding: 0;
+        }
 
         #board1 {
             max-width: 150px;
@@ -826,6 +830,24 @@
 
                                         <div class="location-time">
                                             The date and time in Teahupoʻo is <span class="current">current</span>.
+                                        </div>
+                                        <div class="dropdown">
+                                            <a class="btn" href="#" role="button" id="dropdownMenuLink"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                            </a><span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                    style="color: #ffCD00;"></i></span> <span><a
+                                                    href="https://www.redbull.com/int-en/history-of-teahupoo-surf-wave"
+                                                    class="see-more" target="_blank" rel="noreferrer"
+                                                    title="Link to redbull.com">
+                                                    See more
+                                                </a></span>
+
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
                                         </div>
                                         <div>
                                             <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
