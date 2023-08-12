@@ -90,44 +90,26 @@
             color: #fff;
             opacity: 70%;
             font-size: 1rem;
-            padding: 0.5em 1em;
+            padding: 0.5rem 1rem;
             line-height: 1rem;
-            margin-top: 1em;
+            margin-top: 1rem;
         }
 
 
 
-        #video-section {
-            margin: 0 auto;
-            padding: 100px 20px;
-        }
 
-        .video-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-        }
-
-        .video:hover {
-            transform: scale(1.2);
-            transition: all 150ms ease-in-out;
-        }
 
         .container {
             align-content: center;
             position: relative;
             margin-inline: auto;
-            padding: 0 5em;
+            padding: 0 5rem;
             text-align: center;
             max-width: 1100px;
             width: 100%;
         }
 
-        @media only screen and (max-width: 1000px) {
-            .container {
-                padding: 0 2em;
-            }
-        }
+
 
         .wrapper-2 {
             background: rgb(42, 141, 243);
@@ -144,8 +126,7 @@
 
         #send {
             color: #fff;
-            font-size: 10px;
-
+            font-size: 0.7rem;
             opacity: 0.8;
         }
 
@@ -160,19 +141,19 @@
 
         #fourth-section {
             font-size: 3rem;
-            margin-bottom: 1em;
-            padding: 1em;
+            margin-bottom: 1rem;
+            padding: 2rem;
         }
 
         #fourth-section h2 {
             font-size: 2.5rem;
-            line-height: 1.5rem;
+
 
         }
 
         #fourth-section p {
             font-size: 1rem;
-            line-height: 1.5rem;
+
 
         }
 
@@ -209,9 +190,10 @@
         }
 
         .hero {
+            text-shadow: 5px 5px 10px rgba(54, 5, 58, 0.4);
             color: #fff;
-
         }
+
 
 
 
@@ -373,6 +355,7 @@
             box-shadow: none;
             width: 100%;
             height: 40px;
+
         }
 
 
@@ -393,15 +376,15 @@
         .card {
             background-color: transparent;
             border: none;
-            margin: 30px 0;
+            margin: 3rem 0;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            padding: 10px;
+            padding: 0.75rem;
         }
 
         .card-header.grid {
-            grid-gap: 30px;
+            grid-gap: 2rem;
             padding: 0;
             background-color: transparent;
 
@@ -418,10 +401,6 @@
 
         }
 
-        .text-wrapper {
-            padding: 1em;
-
-        }
 
         .location-time {
             font-size: 12px;
@@ -441,7 +420,7 @@
         }
 
         .box-text-1 {
-            padding-top: 2em;
+            padding-top: 1.5em;
             color: white;
             font-size: 2rem;
             text-align: left;
@@ -453,34 +432,37 @@
             font-size: 2rem;
             text-align: left;
             margin: 0px auto;
+            padding-top: 0;
 
 
         }
 
         .number {
-            font-size: 16px;
+            font-size: 1rem;
             color: var(--secondary-color);
 
         }
 
         .country {
-            font-size: 16px;
+            font-size: 1rem;
             color: #fff;
             opacity: 70%;
         }
 
         .city {
+            text-shadow: 5px 5px 10px rgba(54, 5, 58, 0.4);
             font-family: var(--font-1);
         }
 
         .about-5 {
-            max-width: 600px;
-            margin: 20px auto 0 auto;
+            font-size: 1rem;
+            max-width: 37.5rem;
+            margin: 1.5rem auto 0 auto;
             text-align: center;
         }
 
         .about {
-            font-size: 15px;
+            font-size: 0.85rem;
             line-height: 1.5;
             max-width: 600px;
             text-align: left;
@@ -490,7 +472,7 @@
 
         .dot {
             color: var(--secondary-color);
-            font-size: 5px;
+            font-size: 0.4rem;
             vertical-align: middle;
             margin: 0px 7px;
         }
@@ -531,15 +513,31 @@
 
         }
 
+        #video-section {
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        .video:hover {
+            transform: scale(1.2);
+            transition: all 150ms ease-in-out;
+        }
+
         .video-text h2 {
-            padding: 0 10px;
+            font-size: 2.5rem;
             text-align: left;
             color: #000;
             margin-bottom: 30px;
         }
 
-        .video-text h2 {
-            font-size: 50px;
+        .video-text p {
+            font-size: 0.9rem;
 
         }
 
@@ -565,20 +563,47 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             margin: 0 auto;
-            padding: 0 90px;
-            text-align: left;
+            padding: 0 2rem;
+            justify-content: space-between;
 
         }
 
         ul {
-            margin-top: 20px;
+            margin-top: 1.5rem;
             display: inline-block;
             text-align: left;
             list-style-type: none;
 
         }
 
+        .App-credits {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: var(--primary-color);
+            font-size: 15px;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+        }
 
+        .GitHub a {
+            color: var(--primary-color);
+            padding: 3px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .GitHub a:hover {
+            border-radius: 5px;
+            background: var(--primary-color);
+            color: var(--fourth-color);
+            text-decoration: none;
+        }
+
+
+        @media only screen and (max-width: 1000px) {
+            .container {
+                padding: 0 2em;
+            }
+        }
 
         @media (max-width: 767.98px) {
             .surf-boards {
@@ -609,6 +634,8 @@
                 font-size: 1rem;
             }
 
+
+
             .boards {
                 top: 1rem;
             }
@@ -631,6 +658,27 @@
 
             }
 
+            .footer-grid {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            .footer-grid h5 {
+                font-size: 1rem;
+            }
+
+
+            .footer-grid ul {
+                margin: 0 auto;
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+
+            #video-section {
+                padding: 2rem;
+            }
+
+
         }
 
         @media (max-width: 535px) {
@@ -646,11 +694,30 @@
                 font-size: 2rem;
             }
 
+            #video-section {
+                padding: 2rem;
+            }
+
             .video-gallery {
                 display: grid;
                 grid-template-columns: 1fr;
 
             }
+
+
+
+            .footer-grid {
+                margin: 0 auto;
+                padding: 1rem;
+            }
+
+            .footer-grid h5 {
+                font-size: 1rem;
+            }
+
+
+
+
         }
     </style>
 </head>
@@ -875,12 +942,14 @@
                         </div>
                         <div class="card">
                             <div class="card-header grid grid-2-columns">
+
                                 <div class="text-wrapper">
                                     <div class="box-text"><span class="number">#4</span>
                                         <span class="country">Portugal</span>
                                         <div class="city">Nazare</div>
                                         <div class="about" id="portugal">
-                                            "Nazaré is a popular surfing destination because of the high breaking waves
+                                            "Nazaré is a popular surfing destination because of the high breaking
+                                            waves
                                             that form due to the presence of the
                                             underwater Nazaré Canyon. The canyon increases and converges the
                                             incoming ocean swell which, in conjunction with the
@@ -906,7 +975,9 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
+
                                 <img class="img-responsive"
                                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
                                     alt="">
@@ -955,7 +1026,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-header grid grid-2-columns">
+                                <div class="card-header grid grid-2-columns" id="reverse">
                                     <div class="text-wrapper">
                                         <div class="box-text"><span class="number">#2</span> <span class="country">New
                                                 Zealand</span>
@@ -1157,6 +1228,20 @@
             </div>
         </footer>
     </section>
+    <div class="App-credits">
+        <div class="GitHub">
+            This website was made by
+            <a href="https://celia-corona-doran2023.netlify.app/" target="_blank" rel="noreferrer"
+                title="Link to Celia's Portfolio">
+                <span> Celia Corona-Doran 👩🏾‍💻</span>
+            </a>
+            and open sourced on
+            <a href="https://github.com/Newadventure2022/favorite-sport-surfing" target="_blank" rel="noreferrer"
+                title="Link to Celia's GitHub">
+                <span> GitHub</span>. <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
     <script>
         function updateTime() {
             // Tahiti
