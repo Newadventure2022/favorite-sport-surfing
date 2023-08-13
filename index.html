@@ -28,7 +28,7 @@
             --secondary-color: #FFCD00;
             --third-color: #79c2d0;
             --fourth-color: #bbe4e9;
-            --box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+            --box-shadow: 0 0px 70px rgba(0, 0, 0, .8);
             --border-radius: 5px;
 
 
@@ -47,10 +47,10 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-family: var(--font-1);
             font-weight: 700;
-
+            margin-bottom: 40px;
         }
 
         h2 {
@@ -60,10 +60,13 @@
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-family: var(--font-2);
             color: #fff;
-            opacity: 70%;
+            opacity: .7;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
 
         p {
@@ -75,13 +78,30 @@
             border: #000 solid 2px;
         }
 
+        #first-section {
+            background: black;
+            min-height: 100svh;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
 
+        .hero {
+            height: 100svh;
+        }
 
-        .hero img {
+        .hero .hero-img {
             position: relative;
             width: 100%;
             height: 100%;
-            box-shadow: var(--box-shadow);
+        }
+
+        .hero .hero-img img {
+            width: 100%;
+            height: 100%;
+            max-height: 100svh;
+            object-fit: cover;
+            opacity: .8;
         }
 
         button {
@@ -89,37 +109,35 @@
             border: #fff solid 1px;
             border-radius: 6rem;
             color: #fff;
-            opacity: 70%;
+            opacity: 100%;
             font-size: 1rem;
-            padding: 0.5rem 1rem;
+            padding: 1rem 2rem;
             line-height: 1rem;
             margin-top: 1rem;
+            transform: scale(1);
+            transition: all .2s ease-out;
         }
 
-
-
+        button:hover {
+            transform: scale(1.06);
+            background-color: rgba(0, 0, 0, .2);
+        }
 
 
         .container {
-
             align-content: center;
             position: relative;
             margin-inline: auto;
-            padding: 0 5rem;
+            padding: 0 2rem;
             text-align: center;
             max-width: 68.75rem;
             width: 100%;
-
+            margin: 0 auto;
         }
-
-
 
         .wrapper-2 {
             background: rgb(42, 141, 243);
             background: linear-gradient(180deg, rgba(42, 141, 243, 1) 0%, rgba(9, 9, 121, 1) 70%);
-            overflow: hidden;
-
-
         }
 
         #second-section {
@@ -127,6 +145,7 @@
             padding-top: 0;
             padding-bottom: 0;
             width: auto;
+            position: relative;
         }
 
         #send {
@@ -139,6 +158,22 @@
             padding: 0;
         }
 
+        #send svg {
+            transform: scale(1.2);
+        }
+
+        .location-bottom {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .location-bottom span:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+        }
+
         #board1 {
             max-width: 150px;
             box-shadow: none;
@@ -148,6 +183,7 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             padding: 2rem;
+            margin-top: 50px;
         }
 
         #fourth-section h2 {
@@ -188,24 +224,20 @@
             color: white;
             position: absolute;
             text-align: left;
-            top: 11rem;
-            width: 100%;
             margin-left: 3rem;
-
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 0;
+            bottom: 0;
+            justify-content: center;
         }
-
-        .hero {
-            text-shadow: 5px 5px 10px rgba(54, 5, 58, 0.4);
-            color: #fff;
-        }
-
-
-
 
         .boards {
-
-
-            position: relative;
+            position: absolute;
+            width: 100%;
             left: 0;
             top: -80px;
             z-index: 2;
@@ -215,13 +247,11 @@
         .surf-boards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-
-
+            padding: 0 2rem;
         }
 
         .surf {
-            display: grid;
-            height: 100%;
+            display: flex;
             justify-content: center;
             align-items: center;
             background-color: #fff;
@@ -231,30 +261,33 @@
         }
 
         .surf-2 {
-            display: grid;
+            display: flex;
+            align-items: center;
             grid-template-columns: repeat(2, 1fr);
             background-color: #fff;
             border: #000 solid 1px;
             gap: 0;
+            align-items: center;
+            padding: 5px 0;
         }
 
         .surf p {
-            text-align: center;
+            text-align: left;
             margin-bottom: 0;
 
         }
 
         .S1 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-family: var(--font-2);
             font-weight: 700;
             color: #000;
         }
 
         .S2 {
-            padding-top: 2rem;
-            padding-right: 2rem;
-            font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-right: 1rem;
+            font-size: 1.2rem;
             font-family: var(--font-2);
             font-weight: 600;
             color: #000;
@@ -269,6 +302,10 @@
             opacity: 70%;
             text-decoration: none;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
         }
 
         .arrow {
@@ -277,6 +314,11 @@
             border-radius: 50px;
             opacity: none;
             padding: 1px 1px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .news-wrapper {
@@ -284,6 +326,10 @@
             justify-content: space-between;
             margin-top: 5rem;
             width: auto;
+        }
+
+        #news-section {
+            margin-top: 150px;
         }
 
         .more-news {
@@ -302,18 +348,25 @@
             width: auto;
         }
 
+        .news-articles::-webkit-scrollbar {
+            height: 0px;
+        }
+
         .news {
             border: 1px solid black;
-            min-width: 325px;
+            min-width: 400px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
-            gap: 10px;
+            gap: 20px;
+            padding-right: 20px;
         }
 
         .news img {
-            height: 8rem;
             box-shadow: none;
+            height: 9rem;
+            width: 9rem;
+            object-fit: cover;
         }
 
         .scroll {
@@ -329,17 +382,31 @@
             font-weight: 700;
             line-height: 18px;
             text-align: left;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .news-text .small {
+            margin-bottom: auto;
+            line-height: 1.3rem;
         }
 
 
-
-        .news-text a {
-
+        .news-text a.latest-news {
             color: #000;
             opacity: 0.7;
-            font-size: x-small;
+            font-size: 12px;
             font-weight: 700;
             text-decoration: none;
+        }
+
+        .news-text a.latest-news:hover {
+            color: #000;
+            opacity: 1;
+            text-decoration: underline;
         }
 
         .news-text a:hover {
@@ -362,7 +429,6 @@
             bottom: 0;
             background-color: rgb(9, 9, 121);
             margin: auto;
-            overflow: hidden;
         }
 
         .waves {
@@ -438,6 +504,21 @@
 
         }
 
+        h5.foot-links {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .footer-grid li a {
+            font-size: .8rem;
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer-grid li a:hover {
+            text-decoration: underline;
+        }
+
         @keyframes animate {
             0% {
                 transform: translateX(0) translateZ(0) scaleY(1);
@@ -497,8 +578,8 @@
 
 
         .location-time {
-            font-size: 12px;
-            margin: 10px 0;
+            font-size: 14px;
+            margin: 15px 0 30px 0;
             opacity: .7;
         }
 
@@ -511,14 +592,6 @@
             position: relative;
             z-index: 1;
             top: -120px;
-        }
-
-        .box-text-1 {
-            padding-top: 1.5em;
-            color: white;
-            font-size: 2rem;
-            text-align: left;
-            margin: 0px auto;
         }
 
         .box-text {
@@ -544,8 +617,9 @@
         }
 
         .city {
-            text-shadow: 5px 5px 10px rgba(54, 5, 58, 0.4);
             font-family: var(--font-1);
+            margin-bottom: 25px;
+            line-height: 32px;
         }
 
         .about-5 {
@@ -584,7 +658,8 @@
         }
 
         .small {
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: 600;
         }
 
 
@@ -600,11 +675,16 @@
 
         .see-more {
             color: #fff;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 500;
             vertical-align: middle;
             opacity: 0.8;
+            text-decoration: none;
 
+        }
+
+        .see-more:hover {
+            text-decoration: underline;
         }
 
         #video-section {
@@ -657,7 +737,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 2rem 2rem 2rem;
             justify-content: space-between;
 
         }
@@ -671,16 +751,17 @@
         }
 
         .App-credits {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: var(--primary-color);
-            font-size: 15px;
+            background-color: #666;
+            color: rgba(255, 255, 255, .7);
+            font-size: 11px;
             justify-content: center;
-            padding: 10px;
+            padding: 10px 10px;
             text-align: center;
+            text-transform: uppercase;
         }
 
         .GitHub a {
-            color: var(--primary-color);
+            color: white;
             padding: 3px;
             transition: all 150ms ease-in-out;
         }
@@ -697,12 +778,21 @@
             .container {
                 padding: 0 2em;
             }
+
+            .boards {
+                position: relative;
+            }
+
+            .surf-boards {
+                padding: 0;
+            }
+
+            #news-section {
+                margin-top: 0;
+            }
         }
 
-        @media (max-width: 767.98px) {
-
-
-
+        @media (max-width: 767px) {
             .surf-boards {
                 grid-template-columns: 1fr;
             }
@@ -711,12 +801,31 @@
                 grid-template-columns: 1fr;
             }
 
+            #reverse .card-header img {
+                order: -1;
+            }
+
+            .card-header .text-wrapper {
+                margin-bottom: 3rem;
+            }
+
+            .card-header.grid {
+                grid-gap: 1rem;
+            }
+
             .grid-5-rows {
                 grid-gap: 5px;
             }
 
             .text {
-                top: 4rem;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            button {
+                font-size: .9rem;
+                padding: .9rem 1.5rem;
+                margin-top: 0;
             }
 
             #first-section h1 {
@@ -729,11 +838,22 @@
 
             #fourth-section p {
                 font-size: 1rem;
+                margin-bottom: 3rem;
             }
 
+            .card {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                padding: 0;
+            }
 
             .boards {
-                top: 1rem;
+                top: 0;
+            }
+
+            .surf {
+                padding: 2em 1em;
+                margin-top: -40px;
             }
 
             .surf-2 {
@@ -760,7 +880,7 @@
             }
 
             .footer-grid h5 {
-                font-size: 1rem;
+                font-size: .9rem;
             }
 
 
@@ -772,6 +892,7 @@
 
             #video-section {
                 padding: 2rem;
+                margin-top: 5rem;
             }
 
 
@@ -780,6 +901,11 @@
         @media (max-width: 535px) {
             #first-section h1 {
                 font-size: 2rem;
+                margin-bottom: 1em;
+            }
+
+            h1+button {
+                margin-top: 1em;
             }
 
             .text {
@@ -817,8 +943,8 @@
 
 <body>
     <section id="first-section">
-        <header class=" hero">
-            <div class="img">
+        <header class="hero">
+            <div class="hero-img">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/135/original/Hero_.jpg?1691153218"
                     alt="Sunset Surf">
             </div>
@@ -986,8 +1112,7 @@
                                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/789/original/teahupoo-tahiti-freesurfing.jpg?1691675704"
                                 alt="">
                             <div class="text-wrapper">
-                                <div class="box-text-1"><span class="number">#5</span> <span
-                                        class="country">Tahiti</span>
+                                <div class="box-text"><span class="number">#5</span> <span class="country">Tahiti</span>
                                     <div class="city">Teahupo'o</div>
                                     <div class="about" id="tahiti">
                                         "The swells mainly break backwards, but the outer
@@ -1015,13 +1140,13 @@
                                                     See more
                                                 </a></span>
 
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
-                                        <div>
+                                        <div class="location-bottom">
                                             <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
                                             <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
                                                     style="color: #ffCD00;"></i></span> <span><a
@@ -1035,175 +1160,175 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header grid grid-2-columns">
+                    </div>
+                    <div class="card" id="reverse">
+                        <div class="card-header grid grid-2-columns">
 
-                                <div class="text-wrapper">
-                                    <div class="box-text"><span class="number">#4</span>
-                                        <span class="country">Portugal</span>
-                                        <div class="city">Nazare</div>
-                                        <div class="about" id="portugal">
-                                            "Nazaré is a popular surfing destination because of the high breaking
-                                            waves
-                                            that form due to the presence of the
-                                            underwater Nazaré Canyon. The canyon increases and converges the
-                                            incoming ocean swell which, in conjunction with the
-                                            local water current, dramatically enlarges wave heights."
-                                            <span class="wikipedia"><a
-                                                    href="https://en.wikipedia.org/wiki/Nazar%C3%A9,_Portugal#Surfing"
-                                                    target="_blank" rel="noreferrer" title="Link to Wikipedia">
-                                                    <Span class="small"> ~Wikipedia</Span></a></span>
-                                            <br>
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#4</span>
+                                    <span class="country">Portugal</span>
+                                    <div class="city">Nazare</div>
+                                    <div class="about" id="portugal">
+                                        "Nazaré is a popular surfing destination because of the high breaking
+                                        waves
+                                        that form due to the presence of the
+                                        underwater Nazaré Canyon. The canyon increases and converges the
+                                        incoming ocean swell which, in conjunction with the
+                                        local water current, dramatically enlarges wave heights."
+                                        <span class="wikipedia"><a
+                                                href="https://en.wikipedia.org/wiki/Nazar%C3%A9,_Portugal#Surfing"
+                                                target="_blank" rel="noreferrer" title="Link to Wikipedia">
+                                                <Span class="small"> ~Wikipedia</Span></a></span>
+                                        <br>
 
-                                            <div class="location-time">The date and time in Nazare is <span
-                                                    class="current">current</span>.
-                                            </div>
-                                            <div>
-                                                <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                                        style="color: #ffCD00;"></i></span> <span><a
-                                                        href="https://www.redbull.com/int-en/history-of-big-wave-surfing-at-nazare"
-                                                        class="see-more" target="_blank" rel="noreferrer"
-                                                        title="Link to redbull.com">
-                                                        See more
-                                                    </a></span>
-                                            </div>
+                                        <div class="location-time">The date and time in Nazare is <span
+                                                class="current">current</span>.
+                                        </div>
+                                        <div class="location-bottom">
+                                            <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                    style="color: #ffCD00;"></i></span> <span><a
+                                                    href="https://www.redbull.com/int-en/history-of-big-wave-surfing-at-nazare"
+                                                    class="see-more" target="_blank" rel="noreferrer"
+                                                    title="Link to redbull.com">
+                                                    See more
+                                                </a></span>
                                         </div>
                                     </div>
-
                                 </div>
 
-                                <img class="img-responsive"
-                                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
-                                    alt="">
-
                             </div>
+
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/127/original/location4.jpg?1691150730"
+                                alt="">
+
                         </div>
-                        <div class="card">
-                            <div class="card-header grid grid-2-columns">
-                                <img class="img-responsive"
-                                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/792/original/Waimea.jpg?1691676542"
-                                    alt="">
-                                <div class="text-wrapper">
-                                    <div class="box-text"><span class="number">#3</span> <span
-                                            class="country">Hawaii</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/792/original/Waimea.jpg?1691676542"
+                                alt="">
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#3</span> <span class="country">Hawaii</span>
 
-                                        <div class="city">Waimea</div>
-                                        <div class="about" id="honolulu">
-                                            In winter, Waimea and other North Shore locations such as Pipeline and
-                                            Sunset Beach host a number of surfing contests
-                                            because of the large waves found here. These waves are created by winter
-                                            storms in the North Pacific, and their arrival
-                                            on O'ahu's North Shore is typically forecast accurately several days in
-                                            advance. In summer, Waimea typically has clear
-                                            and calm water. <span class="wikipedia"><a
-                                                    href="https://en.wikipedia.org/wiki/Waimea_Bay" target="_blank"
-                                                    rel="noreferrer" title="Link to Wikipedia">
-                                                    <Span class="small"> ~Wikipedia</Span></a></span>
+                                    <div class="city">Waimea</div>
+                                    <div class="about" id="honolulu">
+                                        In winter, Waimea and other North Shore locations such as Pipeline and
+                                        Sunset Beach host a number of surfing contests
+                                        because of the large waves found here. These waves are created by winter
+                                        storms in the North Pacific, and their arrival
+                                        on O'ahu's North Shore is typically forecast accurately several days in
+                                        advance. In summer, Waimea typically has clear
+                                        and calm water. <span class="wikipedia"><a
+                                                href="https://en.wikipedia.org/wiki/Waimea_Bay" target="_blank"
+                                                rel="noreferrer" title="Link to Wikipedia">
+                                                <Span class="small"> ~Wikipedia</Span></a></span>
 
-                                            <br>
+                                        <br>
 
-                                            <div class="location-time">The date and time in Waimea is <span
-                                                    class="current">current</span>.
-                                            </div>
-                                            <div>
-                                                <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                                        style="color: #ffCD00;"></i></span>
-                                                <span><a href="https://www.redbull.com/int-en/20-foot-plus"
-                                                        class="see-more" target="_blank" rel="noreferrer"
-                                                        title="Link to redbull.com">
-                                                        See more
-                                                    </a></span>
-                                            </div>
+                                        <div class="location-time">The date and time in Waimea is <span
+                                                class="current">current</span>.
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header grid grid-2-columns" id="reverse">
-                                    <div class="text-wrapper">
-                                        <div class="box-text"><span class="number">#2</span> <span class="country">New
-                                                Zealand</span>
-                                            <div class="city">Raglan</div>
-                                            <div class="about" id="raglan">
-                                                "Raglan is best known for its surf. Eight kilometres from the Raglan
-                                                township is a series of surf breaks including
-                                                Indicators, Whale Bay, Manu Bay, Vortex Bay. Manu Bay was featured in
-                                                the 1966 movie The Endless Summer and in the 2010
-                                                movie Last Paradise. The traditional name for Manu Bay is 'Waikeri',
-                                                meaning surging or swirling waters. The former
-                                                native reserve was bought for a recreation reserve in 1971."<span
-                                                    class="wikipedia"><a
-                                                        href="https://en.wikipedia.org/wiki/Raglan,_New_Zealand#Surf_breaks"
-                                                        target="_blank" rel="noreferrer" title="Link to Wikipedia">
-                                                        <Span class="small"> ~Wikipedia</Span></a></span>
-                                                <br>
-
-                                                <div class="location-time">The date and time in Raglan is <span
-                                                        class="current">current</span>.
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                                        style="color: #ffCD00;"></i></span>
-                                                <span><a href="https://www.surfertoday.com/surfing/raglan-the-kiwi-left-hand-point-break-heaven"
-                                                        class="see-more" target="_blank" rel="noreferrer"
-                                                        title="Link to surfertoday.com">
-                                                        See more
-                                                    </a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive"
-                                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/794/original/Raglan-new-zealand.jpg?1691676906"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header grid grid-2-columns">
-                                    <img class="img-responsive"
-                                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/796/original/Pe'ahi__Hawaii.jpg?1691677602"
-                                        alt="Pe'ahi__Hawaii">
-
-                                    <div class="text-wrapper">
-                                        <div class="box-text"><span class="number">#1</span> <span
-                                                class="country">Hawaii</span>
-
-                                            <div class="city">Pe'ahi "Jaws"</div>
-                                            <div class="about" id="hawaii">
-                                                "The wave sizes at Jaws (which can exceed 60 feet (18 m) during the
-                                                months of December to March) attract big wave surfers
-                                                such as Laird Hamilton and Dave Kalama using the tow-in surfing method
-                                                of big wave surf riding they co-invented (with
-                                                Darrick Doerner and Buzzy Kerbox). To avoid a steep climb, rocky
-                                                beach and fast-moving waves, many surfers are towed
-                                                by personal water craft launched from nearby areas such as the boat ramp
-                                                at Māliko Bay."<span class="wikipedia"><a
-                                                        href="https://en.wikipedia.org/wiki/Peahi,_Hawaii"
-                                                        target="_blank" rel="noreferrer" title="Link to Wikipedia">
-                                                        <Span class="small"> ~Wikipedia</Span></a></span>
-                                                <div class="location-time">The date and time in Pe'ahi is <span
-                                                        class="current">current</span>.
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
-                                                <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
-                                                        style="color: #ffCD00;"></i></span>
-                                                <span><a href="https://www.surfertoday.com/surfing/jaws-interesting-facts-about-maui-big-wave-surfing-break"
-                                                        class="see-more" target="_blank" rel="noreferrer"
-                                                        title="Link to surfertoday.com">
-                                                        See more
-                                                    </a></span>
-                                            </div>
+                                        <div class="location-bottom">
+                                            <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                            <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                    style="color: #ffCD00;"></i></span>
+                                            <span class=""><a href="https://www.redbull.com/int-en/20-foot-plus"
+                                                    class="see-more" target="_blank" rel="noreferrer"
+                                                    title="Link to redbull.com">
+                                                    See more
+                                                </a></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="card" id="reverse">
+                        <div class="card-header grid grid-2-columns">
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#2</span> <span class="country">New
+                                        Zealand</span>
+                                    <div class="city">Raglan</div>
+                                    <div class="about" id="raglan">
+                                        "Raglan is best known for its surf. Eight kilometres from the Raglan
+                                        township is a series of surf breaks including
+                                        Indicators, Whale Bay, Manu Bay, Vortex Bay. Manu Bay was featured in
+                                        the 1966 movie The Endless Summer and in the 2010
+                                        movie Last Paradise. The traditional name for Manu Bay is 'Waikeri',
+                                        meaning surging or swirling waters. The former
+                                        native reserve was bought for a recreation reserve in 1971."<span
+                                            class="wikipedia"><a
+                                                href="https://en.wikipedia.org/wiki/Raglan,_New_Zealand#Surf_breaks"
+                                                target="_blank" rel="noreferrer" title="Link to Wikipedia">
+                                                <Span class="small"> ~Wikipedia</Span></a></span>
+                                        <br>
+
+                                        <div class="location-time">The date and time in Raglan is <span
+                                                class="current">current</span>.
+                                        </div>
+                                    </div>
+                                    <div class="location-bottom">
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span>
+                                        <span><a href="https://www.surfertoday.com/surfing/raglan-the-kiwi-left-hand-point-break-heaven"
+                                                class="see-more" target="_blank" rel="noreferrer"
+                                                title="Link to surfertoday.com">
+                                                See more
+                                            </a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/794/original/Raglan-new-zealand.jpg?1691676906"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <img class="img-responsive"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/796/original/Pe'ahi__Hawaii.jpg?1691677602"
+                                alt="Pe'ahi__Hawaii">
+
+                            <div class="text-wrapper">
+                                <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
+
+                                    <div class="city">Pe'ahi "Jaws"</div>
+                                    <div class="about" id="hawaii">
+                                        "The wave sizes at Jaws (which can exceed 60 feet (18 m) during the
+                                        months of December to March) attract big wave surfers
+                                        such as Laird Hamilton and Dave Kalama using the tow-in surfing method
+                                        of big wave surf riding they co-invented (with
+                                        Darrick Doerner and Buzzy Kerbox). To avoid a steep climb, rocky
+                                        beach and fast-moving waves, many surfers are towed
+                                        by personal water craft launched from nearby areas such as the boat ramp
+                                        at Māliko Bay."<span class="wikipedia"><a
+                                                href="https://en.wikipedia.org/wiki/Peahi,_Hawaii" target="_blank"
+                                                rel="noreferrer" title="Link to Wikipedia">
+                                                <Span class="small"> ~Wikipedia</Span></a></span>
+                                        <div class="location-time">The date and time in Pe'ahi is <span
+                                                class="current">current</span>.
+                                        </div>
+                                    </div>
+                                    <div class="location-bottom">
+                                        <span id="send"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
+                                                style="color: #ffCD00;"></i></span>
+                                        <span><a href="https://www.surfertoday.com/surfing/jaws-interesting-facts-about-maui-big-wave-surfing-break"
+                                                class="see-more" target="_blank" rel="noreferrer"
+                                                title="Link to surfertoday.com">
+                                                See more
+                                            </a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -1300,11 +1425,11 @@
                     <li>
                         <h5 class="foot-links">Links</h5>
                     </li>
-                    <li>Home</li>
-                    <li>Shop</li>
-                    <li>Competitions</li>
-                    <li>Interviews</li>
-                    <li>Courses</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Competitions</a></li>
+                    <li><a href="">Interviews</a></li>
+                    <li><a href="">Courses</a></li>
                 </ul>
 
             </div>
@@ -1315,11 +1440,11 @@
                     <li>
                         <h5 class="foot-links">Store</h5>
                     </li>
-                    <li>Home</li>
-                    <li>Shop</li>
-                    <li>Competitions</li>
-                    <li>Interviews</li>
-                    <li>Courses</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Competitions</a></li>
+                    <li><a href="">Interviews</a></li>
+                    <li><a href="">Courses</a></li>
                 </ul>
             </div>
             <div>
@@ -1328,11 +1453,11 @@
                     <li>
                         <h5 class="foot-links">Regions</h5>
                     </li>
-                    <li>Home</li>
-                    <li>Shop</li>
-                    <li>Competitions</li>
-                    <li>Interviews</li>
-                    <li>Courses</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Competitions</a></li>
+                    <li><a href="">Interviews</a></li>
+                    <li><a href="">Courses</a></li>
                 </ul>
             </div>
         </footer>
