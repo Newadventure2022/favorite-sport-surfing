@@ -44,6 +44,7 @@
             background-color: white;
             margin: 0 auto;
 
+
         }
 
         h1 {
@@ -136,7 +137,6 @@
         }
 
         .wrapper-2 {
-            background: rgb(42, 141, 243);
             background: linear-gradient(180deg, rgba(42, 141, 243, 1) 0%, rgba(9, 9, 121, 1) 70%);
 
         }
@@ -419,86 +419,15 @@
             transition: all 150ms ease-in-out;
         }
 
-        .wave-wrapper {
-            background-color: rgb(113, 214, 247);
-            width: auto;
-        }
+
 
         .waves {
             box-shadow: none;
             width: 100%;
-            height: 40px;
+            max-height: 3rem;
         }
 
-        #wave-animation {
-            width: 100%;
-            overflow: hidden;
-            margin: auto;
-        }
 
-        .line {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .line-1 {
-            z-index: 15;
-        }
-
-        .line-2 {
-            z-index: 10;
-            opacity: 0.2;
-        }
-
-        .line-3 {
-            z-index: 5;
-            opacity: 0.2;
-        }
-
-        .wave {
-
-            position: absolute;
-            left: 0;
-            min-height: 15%;
-            background-repeat: repeat no-repeat;
-            overflow: hidden;
-        }
-
-        .wave1 {
-            width: 100%;
-            background-size: 100% 80px;
-            overflow: hidden;
-        }
-
-        .wave2 {
-            width: 200%;
-            background-size: 50% 100px;
-            animation: animate 12s linear infinite;
-            overflow: hidden;
-        }
-
-        .wave3 {
-            width: 200%;
-            background-size: 50% 80px;
-            animation: animate 22s linear infinite;
-            overflow: hidden;
-
-        }
-
-        @keyframes animate {
-            0% {
-                transform: translateX(0) translateZ(0) scaleY(1);
-            }
-
-            50% {
-                transform: translateX(-25%) translateZ(0) scaleY(0.5);
-            }
-
-            100% {
-                transform: translateX(-50%) translateZ(0) scaleY(1);
-
-            }
-        }
 
         section h5.foot-links {
             font-size: 1rem;
@@ -939,7 +868,9 @@
                     The Best <span class="five">5</span> Surfing <br /> Spots in the World
                 </h1>
                 <button>
-                    View More
+                    <a class="nav-link active" href="/index.html#fourth-section" title="Link to Best Locations">View
+                        More</a>
+
                 </button>
 
             </div>
@@ -950,9 +881,9 @@
         <div class="boards">
             <div class="surf-boards">
                 <div class="surf">
-                    <p class="S1">Check out our<br> Surf Boards
+                    <p class="S1">Check out these<br> Surf Boards
                         <br>
-                        <a href="" class="view-more">
+                        <a href="https://shop-au.cisurfboards.com/" class="view-more" target="_blank" rel="noreferrer">
                             View more <span class="arrow">➜</span>
                         </a>
                     </p>
@@ -963,7 +894,8 @@
                         alt="Blue Surf boards">
                     <p class="S2">AI Merrick
                         <br>
-                        <a href="" class="view-more">
+                        <a href="https://cisurfboards.com/products/g-skate" class="view-more" target="_blank"
+                            rel="noreferrer">
                             View more <span class="arrow">➜</span>
                         </a>
                     </p>
@@ -974,7 +906,8 @@
                         alt="Blue Surf boards">
                     <p class="S2">AI Merrick
                         <br>
-                        <a href="" class="view-more">
+                        <a href="https://www.singlequiver.com/en/surfboards/al-merrick-twin-pin" class="view-more"
+                            target="_blank" rel="noreferrer">
                             View more <span class="arrow">➜</span>
                         </a>
                     </p>
@@ -1296,26 +1229,21 @@
                 </div>
             </div>
         </section>
+
     </div>
 
 
-    <section id="wave-animation">
-        <div class="line line-1">
-            <div class="wave wave1"
-                style="background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/430/original/waves2.jpg?1691370059);">
-            </div>
-        </div>
-        <div class="line line-2">
-            <div class="wave wave2"
-                style="background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/144/original/2.png?1691860969)">
-            </div>
-        </div>
-        <div class="line line-3">
-            <div class="wave wave3"
-                style="background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/145/original/3.png?1691860976)">
-            </div>
-        </div>
-    </section>
+
+
+
+
+    <div class="wave-wrapper">
+        <img class="waves image-fluid"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/430/original/waves2.jpg?1691370059"
+            alt="waves">
+    </div>
+
+
     <section class="container" id="video-section">
         <div class="video-text">
             <h2>
@@ -1387,41 +1315,59 @@
 
                 <ul>
                     <li>
-                        <h5 class="foot-links">Links</h5>
+                        <h5 class="foot-links">World Surf League</h5>
                     </li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Competitions</a></li>
-                    <li><a href="">Interviews</a></li>
-                    <li><a href="">Courses</a></li>
+                    <li><a href="https://www.worldsurfleague.com/" target="_blank" rel="noreferrer"
+                            title="Link to WSL">Home</a></li>
+                    <li><a href="https://www.worldsurfleague.com/events?month=august&year=2023" target="_blank"
+                            rel="noreferrer" title="Link to WSL">Schedule</a></li>
+                    <li><a href="https://www.worldsurfleague.com/athletes/rankings" target="_blank" rel="noreferrer"
+                            title="Link to WSL">Rankings</a></li>
+                    <li><a href="https://www.worldsurfleague.com/search?q=interviews" target="_blank" rel="noreferrer"
+                            title="Link to WSL">Interviews</a></li>
+
                 </ul>
 
             </div>
 
-            <div>
-
-                <ul>
-                    <li>
-                        <h5 class="foot-links">Store</h5>
-                    </li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Competitions</a></li>
-                    <li><a href="">Interviews</a></li>
-                    <li><a href="">Courses</a></li>
-                </ul>
-            </div>
             <div>
 
                 <ul>
                     <li>
                         <h5 class="foot-links">Regions</h5>
                     </li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Competitions</a></li>
-                    <li><a href="">Interviews</a></li>
-                    <li><a href="">Courses</a></li>
+                    <li><a href="https://www.eurosurfing.org/" target="_blank" rel="noreferrer"
+                            title="Link to eurosurfing.org">Europe</a></li>
+                    <li><a href="https://www.usasurfing.org/" target="_blank" rel="noreferrer"
+                            title="Link to usasurfing.org">USA</a>
+                    </li>
+                    <li><a href="https://surfingaustralia.com/" target="_blank" rel="noreferrer"
+                            title="Link to surfingaustralia.com">Australia</a>
+                    </li>
+                    <li><a href="https://www.federation-surf-tahiti.com/" target="_blank" rel="noreferrer"
+                            title="Link to federation-surf-tahiti.com">Tahiti</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div>
+
+                <ul>
+                    <li>
+                        <h5 class="foot-links">Maps</h5>
+                    </li>
+                    <li><a href="https://goo.gl/maps/Stph13hFVmKfnTND8" target="_blank" rel="noreferrer"
+                            title="Link to Google Maps"></a>Teahupo'o, Tahiti</a></li>
+                    <li><a href="https://goo.gl/maps/aoqzPSvuQ5RYL7gAA" target="_blank" rel="noreferrer"
+                            title="Link to Google Maps">Nazaré, Portugal</a>
+                    </li>
+                    <li><a href="https://goo.gl/maps/JaWJaRCo1a8CXXS56" target="_blank" rel="noreferrer"
+                            title="Link to Google Maps">Waimea Bay, Hawaii</a>
+                    </li>
+                    <li><a href="https://goo.gl/maps/4jYrdxn4gq5mgxzE6" target="_blank" rel="noreferrer"
+                            title="Link to Google Maps">Raglan, New Zealand</a>
+                    </li>
+
                 </ul>
             </div>
         </footer>
