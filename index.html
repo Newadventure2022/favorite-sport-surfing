@@ -161,12 +161,21 @@
 
         #send svg {
             transform: scale(1.2);
+            transition: all .1s ease-in-out;
+        }
+
+        #send svg:hover {
+            transform: scale(1.5);
         }
 
         .location-bottom {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 15px;
+        }
+
+        .location-bottom a {
+            line-height: 1rem;
         }
 
         .location-bottom span:nth-of-type(3) {
@@ -331,6 +340,11 @@
             justify-content: space-between;
             margin-top: 5rem;
             width: auto;
+        }
+
+        .text-wrapper {
+            display: flex;
+            align-items: center;
         }
 
         #news-section {
@@ -552,7 +566,7 @@
             color: var(--secondary-color);
             font-size: 0.4rem;
             vertical-align: middle;
-            margin: 0px 7px;
+            margin-top: 10px;
         }
 
         .date {
@@ -1326,10 +1340,10 @@
 
                 <ul>
                     <li>
-                        <h5 class="foot-links">World Surf League</h5>
+                        <h5 class="foot-links">WSL</h5>
                     </li>
                     <li><a href="https://www.worldsurfleague.com/" target="_blank" rel="noreferrer"
-                            title="Link to WSL">Home</a></li>
+                            title="Link to World Surf League">Home</a></li>
                     <li><a href="https://www.worldsurfleague.com/events?month=august&year=2023" target="_blank"
                             rel="noreferrer" title="Link to WSL">Schedule</a></li>
                     <li><a href="https://www.worldsurfleague.com/athletes/rankings" target="_blank" rel="noreferrer"
@@ -1368,15 +1382,15 @@
                         <h5 class="foot-links">Maps</h5>
                     </li>
                     <li><a href="https://goo.gl/maps/Stph13hFVmKfnTND8" target="_blank" rel="noreferrer"
-                            title="Link to Google Maps">Teahupo'o, Tahiti</a></li>
+                            title="Link to Google Maps">Teahupo'o</a></li>
                     <li><a href="https://goo.gl/maps/aoqzPSvuQ5RYL7gAA" target="_blank" rel="noreferrer"
-                            title="Link to Google Maps">Nazaré, Portugal</a>
+                            title="Link to Google Maps">Nazaré</a>
                     </li>
                     <li><a href="https://goo.gl/maps/JaWJaRCo1a8CXXS56" target="_blank" rel="noreferrer"
-                            title="Link to Google Maps">Waimea Bay, Hawaii</a>
+                            title="Link to Google Maps">Waimea Bay</a>
                     </li>
                     <li><a href="https://goo.gl/maps/4jYrdxn4gq5mgxzE6" target="_blank" rel="noreferrer"
-                            title="Link to Google Maps">Raglan, New Zealand</a>
+                            title="Link to Google Maps">Raglan</a>
                     </li>
 
                 </ul>
