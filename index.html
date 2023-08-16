@@ -1022,7 +1022,10 @@
     <section class="container" id="fourth-section">
         <h2>Best 5 Surfing Locations</h2>
         <div>
-            <p class="about-5">Choosing the 5 best surf spots in the world is speculative. It depends on a few factors.
+            <p class="about-5">As a California native, surfing is special to me. It is built-in as part of the
+                California identity. Beach life, sunshine, and surf. Although I am not a surfer, I have always been a
+                fan. Surfing will always be a favorite sport for me to watch and enjoy.<br>
+                Choosing the 5 best surf spots in the world is speculative. It depends on a few factors.
                 Such as: weather conditions, personal preference, and the overall highest rated spots to surf. Check out
                 these 5 locations in 2023.</p>
         </div>
@@ -1214,26 +1217,22 @@
                     <div class="card">
                         <div class="card-header grid grid-2-columns">
                             <img class="img-responsive"
-                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/796/original/Pe'ahi__Hawaii.jpg?1691677602"
-                                alt="Pe'ahi__Hawaii">
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/657/original/Mavericks.jpeg?1692173588"
+                                alt="Mavericks__California">
 
                             <div class="text-wrapper">
                                 <div class="box-text"><span class="number">#1</span> <span class="country">Hawaii</span>
 
-                                    <div class="city">Pe'ahi "Jaws"</div>
-                                    <div class="about" id="hawaii">
-                                        "The wave sizes at Jaws (which can exceed 60 feet (18 m) during the
-                                        months of December to March) attract big wave surfers
-                                        such as Laird Hamilton and Dave Kalama using the tow-in surfing method
-                                        of big wave surf riding they co-invented (with
-                                        Darrick Doerner and Buzzy Kerbox). To avoid a steep climb, rocky
-                                        beach and fast-moving waves, many surfers are towed
-                                        by personal water craft launched from nearby areas such as the boat ramp
-                                        at Māliko Bay."<span class="wikipedia"><a
-                                                href="https://en.wikipedia.org/wiki/Peahi,_Hawaii" target="_blank"
-                                                rel="noreferrer" title="Link to Wikipedia">
+                                    <div class="city">Mavericks</div>
+                                    <div class="about" id="California">
+                                        "Mavericks is a winter destination for some of the world's best big wave
+                                        surfers. It is a surfing location in northern California outside Pillar
+                                        Point Harbor, just north of the town of Half Moon
+                                        Bay at the village of Princeton-by-the-Sea."<span class="wikipedia"><a
+                                                href="https://en.wikipedia.org/wiki/Mavericks,_California"
+                                                target="_blank" rel="noreferrer" title="Link to Wikipedia">
                                                 <Span class="small"> ~Wikipedia</Span></a></span>
-                                        <div class="location-time">The date and time in Pe'ahi is <span
+                                        <div class="location-time">The date and time in California is <span
                                                 class="current">current</span>.
                                         </div>
                                     </div>
@@ -1243,7 +1242,7 @@
                                         </a>
                                         <span class="dot"> <i class="fa-solid fa-circle fa-beat fa-2xs"
                                                 style="color: #ffCD00;"></i></span>
-                                        <span><a href="https://www.surfertoday.com/surfing/jaws-interesting-facts-about-maui-big-wave-surfing-break"
+                                        <span><a href="https://www.surfertoday.com/surfing/mavericks-interesting-facts-about-californias-big-wave-spot"
                                                 class="see-more" target="_blank" rel="noreferrer"
                                                 title="Link to surfertoday.com">
                                                 See more
@@ -1408,6 +1407,10 @@
                 title="Link to Celia's Portfolio">
                 <span> Celia Corona-Doran 👩🏾‍💻</span>
             </a>
+            <a href="http://shecodes.io/contests/favorite-sport-challenge 
+" target="_blank" rel="noreferrer" title="Link to the SheCodes Favorite Sport Challenge">
+                <span> SheCodes </span></a> Favorite Sport Challenge
+
             and open sourced on
             <a href="https://github.com/Newadventure2022/favorite-sport-surfing" target="_blank" rel="noreferrer"
                 title="Link to Celia's GitHub">
@@ -1445,9 +1448,9 @@
 
             raglanCurrentElement.innerHTML = raglanTime.format("MMM Do YYYY, h:mm a");
             //Hawaii
-            let hawaiiElement = document.querySelector("#hawaii");
+            let hawaiiElement = document.querySelector("#California");
             let hawaiiCurrentElement = hawaiiElement.querySelector(".current")
-            let hawaiiTime = moment().tz("Pacific/Honolulu");
+            let hawaiiTime = moment().tz("America/Los_Angeles");
 
             hawaiiCurrentElement.innerHTML = hawaiiTime.format("MMM Do YYYY, h:mm a");
 
